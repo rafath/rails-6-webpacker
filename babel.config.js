@@ -34,10 +34,17 @@ module.exports = function(api) {
           modules: false,
           exclude: ['transform-typeof-symbol']
         }
+      ],
+      [
+        require('@babel/preset-react').default,
+        {
+          development: isDevelopmentEnv || isTestEnv
+        }
       ]
     ].filter(Boolean),
     plugins: [
       'babel-plugin-macros',
+      '@babel/plugin-transform-react-jsx',
       '@babel/plugin-syntax-dynamic-import',
       isTestEnv && 'babel-plugin-dynamic-import-node',
       '@babel/plugin-transform-destructuring',
