@@ -17,8 +17,7 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["css-loader", "postcss-loader", { loader: "sass-loader", options: { implementation: require("sass") } },
-        ],
+        use: ["css-loader", "sass-loader"],
       },
     ],
   }
