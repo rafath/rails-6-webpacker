@@ -14,5 +14,4 @@ import * as ActiveStorage from "@rails/activestorage"
 require('../stylesheets/application.scss');
 
 Rails.start()
-Turbolinks.start()
 ActiveStorage.start()
